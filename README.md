@@ -1,5 +1,5 @@
 
-
+![CI](https://github.com/Strassee/ahj-http-helpdesk-backend/actions/workflows/web.yml/badge.svg)
 
 [On github Pages](https://strassee.github.io/ahj-http-helpdesk-backend/)
 
