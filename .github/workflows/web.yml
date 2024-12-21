@@ -59,13 +59,13 @@ jobs:
           node-version: 20.11.0
           cache: 'npm'
       - run: npm install
-      - run: npm start
+      - run: npm build
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: 'dist'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

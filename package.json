@@ -6,7 +6,6 @@
   "scripts": {
     "prestart": "npm install",
     "start": "forever server.js",
-    "stop": "forever stop 13988",
     "watch": "forever -w server.js"
   },
   "author": "Evgeniy Filkin",
