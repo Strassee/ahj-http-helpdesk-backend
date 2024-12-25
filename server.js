@@ -7,6 +7,8 @@ const app = new Koa();
 
 const tickets = new Tickets();
 
+const requestMethods = ['GET', 'POST', 'DELETE', 'PUT', 'PATCH'];
+
 app.use(koaBody({
   urlencoded: true,
   multipart: true,
@@ -28,7 +30,7 @@ app.use((ctx, next) => {
 
 
 app.use((ctx, next) => {
-  if (ctx.request.method !== 'GET' && ctx.request.method !== 'POST' && ctx.request.method !== 'DELETE' && ctx.request.method !== 'PUT' && ctx.request.method !== 'PATCH') {
+  if (!requestMethods.includes(ctx.request.method)) {
     next();
     return;
   }
